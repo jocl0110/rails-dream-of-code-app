@@ -1,0 +1,23 @@
+Question #1
+
+CodingClass.find_by({title: "Intro to Programming"}) ##To be able to find the coding_class id //1
+Trimester.where({term: "Spring", year: 2025}) ##To be able find the exact Trimester //5
+Course.find_by({coding_class_id: 1, trimester_id: 5}) ##To be able to find the exact course_id //5
+Enrollment.where({course_id: 5, final_grade: nil}) ##Looking for the students ids that are currently enrolled in the Intro To Programming Course Spring 2025 (Just in case I did not select any student with final_grade "completed") // 43, 46, 49
+Student.where(id: [43, 46, 49]) ##Getting the emails for this students. I do not know how to remove the [Filtered] value so I had to use the Beekeper Studio app instead to find the actual email.
+
+43, nedra.stanton@upton.test
+46, caleb@ondricka.example
+49, brenna_kihn@hilll.example
+
+Question #2
+CodingClass.find_by({title: "Intro to Programming"}) ##To be able to find the coding_class id //1
+Trimester.where({term: "Spring", year: 2025}) ##To be able find the exact Trimester //5
+🙄🙄
+Enrollment.where({course_id: 5, final_grade: nil}) ##Looking for the enrollment ids// 73, 76, 79
+MentorEnrollmentAssignment.where({enrollment_id: [68, 71, 74]}) ##Getting the mentor ids // 23, 24, 25
+Mentor.where({id: [23, 24, 25]}) ##Getting the mentor emails (Same [Filtered] issue)
+
+23, riley.kuhn@dickens.test
+24, kimbra@stracke.example
+25, guy@gutmann-hackett.example
