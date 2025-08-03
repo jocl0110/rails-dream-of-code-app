@@ -7,7 +7,7 @@ end
 Quesion 2
 new_student = Student.create(first_name: 'Lina', last_name: 'Linares', email: 'lina.linares@yahoo.com')
 Enrollment.create(course_id: 36, student_id, final_grade: nil)
-MentorEnrollmentAssignment.create(mentor_id, enrollment_id: 91)
+MentorEnrollmentAssignment.create(mentor_id: 31, enrollment_id: 91)
 
 Question 3
 I would like to create a blog project. Where every user even if they are not registered can see the posts and the comments but If they want to create a post or comment they will need to create their account and sign in to it. Also the users will be able to edit and delete their posts and comments.
