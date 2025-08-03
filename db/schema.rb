@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_30_023924) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_03_011309) do
   create_table "coding_classes", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -38,13 +38,13 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_30_023924) do
     t.index ["student_id"], name: "index_enrollments_on_student_id"
   end
 
-  create_table "lesson_topics", force: :cascade do |t|
+  create_table "lesson_topic", force: :cascade do |t|
     t.integer "lesson_id"
-    t.integer "topics_id"
+    t.integer "topic_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lesson_id"], name: "index_lesson_topics_on_lesson_id"
-    t.index ["topics_id"], name: "index_lesson_topics_on_topics_id"
+    t.index ["lesson_id"], name: "index_lesson_topic_on_lesson_id"
+    t.index ["topic_id"], name: "index_lesson_topic_on_topic_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -98,7 +98,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_30_023924) do
     t.index ["mentor_id"], name: "index_submissions_on_mentor_id"
   end
 
-  create_table "topics", force: :cascade do |t|
+  create_table "topic", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
